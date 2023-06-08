@@ -1,0 +1,19 @@
+lover_num   = 10
+upper_num = 20
+my_num = 14
+playing = True
+attempt = 1
+
+your_num = int(input(f"Enter a number between {lover_num} and {upper_num}: "))
+while playing == True:
+    attempt += 1
+    if your_num == my_num:
+        playing = False
+    elif your_num < my_num:
+        print("Try again! Your guest is low")
+        your_num = int(input("Enter a new number: "))
+    if your_num > my_num:
+        print("Try again! Your guest is high")
+        your_num = int(input("Enter a new number: "))
+else:
+    print(f"Congratulations ! You won in {attempt} attemp")
